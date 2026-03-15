@@ -47,7 +47,11 @@
     </div>
     <hr>
     <div class="footer">
-
+        <p>© {{ year }} Josh Zak</p>
+        <div class="links">
+            <button class="linkedinFooter">LinkedIn</button>
+            <button class="githubfooter" >GitHub</button>
+        </div>
     </div>
   </div>
 </template>
@@ -55,15 +59,16 @@
 
 <script>
     import Project from "@/Project.vue";
-
-
     export default{
+        data() {
+            return{
+                year: new Date().getFullYear()
+            }
+        },
         components: {
             Project
         }
     }
-
-
 
 </script>
 
@@ -72,33 +77,28 @@
 
 <style>
 
-/* 
-Background White
-Primary 214687
-Secondary 83ABE4
-Tertiary4688E0
-*/
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
 .main{
     display: flex;
     flex-direction: column;
-}
-
-.main > *{
-    border: solid black;
+    gap: 3rem;
 }
 
 #header{
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 4rem;
+}
+
+#header .name{
+    color: var(--primary);
+}
+
+#header .about{
+    color: var(--secondary);
+}
+
+#header .projects{
+    color: var(--tertiary);
 }
 
 .nav{
@@ -110,13 +110,54 @@ Tertiary4688E0
     display: flex;
 }
 
+#sec1 h1, #sec2 h2, #sec3 h2{
+    color: var(--primary);
+}
+
+#sec1 h2{
+    color: var(--secondary);
+}
+
+p{
+    color: var(--tertiary);
+}
+
 #sec3{
     display: flex;
     flex-direction: column;
 }
 
+#sec3 .professional, #sec3 .personal{
+    color: var(--secondary);
+}
+
+#sec1, #sec2, #sec3{
+    align-self: center;
+    width: 70%;
+}
+
 .aboutDetails{
+    width: 100%;
     display: flex;
+}
+
+.aboutDetails > * {
+    width: 50%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+h1{
+    font-size: xxx-large;
+}
+
+h2{
+    font-size: xx-large;
 }
 
 </style>

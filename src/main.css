@@ -1,0 +1,14 @@
+:root{
+    --primary: #214687;
+    /* --secondary: #83ABE4;
+    --tertiary: #4688E0; */
+    --secondary: #3D6FB6;
+    --tertiary: #4688E0;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
