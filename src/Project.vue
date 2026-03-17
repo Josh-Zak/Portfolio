@@ -27,6 +27,7 @@ export default{
 <style>
 .projectContainer{
     border: solid black;
-
+    border-radius: 10px;
+    padding: 2rem;
 }
 </style>

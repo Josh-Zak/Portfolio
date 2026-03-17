@@ -1,58 +1,59 @@
 <script setup></script>
 
 <template>
-  <div class="main">
-    <div id="header">
-        <div class="name">Josh Zak - FullStack Engineer</div>
-        <div class="nav">
-            <div class="about">About</div>
-            <div class="projects">Projects</div>
-        </div>
-    </div>
-    <hr>
-    <div id="sec1" class="section">
-        <h1>Josh Zak</h1>
-        <h2>Full-Stack Engineer</h2>
-        <p>
-            I craft elegant solutions to complex problems using modern technologies.
-            Specializing in scalable applications and open-source contributions.
-        </p>
-        <div class="buttons">
-            <button class="linkedin">LinkedIn</button>
-            <button class="github">GitHub</button>
-        </div>
-    </div>
-    <hr>
-    <div id="sec2" class="section">
-        <h2>My Work</h2>
-        <p>Here's an overview of some of my work.</p>
-        <div class="projects">
-            <Project name="Cryptotrage" desc="blah blah blah" link="dummy" github="dummy"/>
-            <Project name="Proj2" desc="blah blah blah" link="dummy" github="dummy"/>
-        </div>
-    </div>
-    <hr>
-    <div id="sec3" class="section">
-        <h2>About Me</h2>
-        <div class="aboutDetails">
-            <div class="professional">
-                <h3>Professional</h3>
-                <p>Learn more about my background and experience.</p>
-            </div>
-            <div class="personal">
-                <h3>Personal</h3>
-                <p>Discover my interests and hobbies outside of work.</p>
+    <div class="main">
+        <div id="header">
+            <p class="name">Josh Zak - FullStack Engineer</p>
+            <div class="nav">
+                <a class="projects" href="#sec2">Projects</a>
+                <a class="about" href="#sec3">About</a>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="footer">
-        <p>© {{ year }} Josh Zak</p>
-        <div class="links">
-            <button class="linkedinFooter">LinkedIn</button>
-            <button class="githubfooter" >GitHub</button>
+        <div id="sec1" class="section">
+            <h1>Josh Zak</h1>
+            <h2>Full-Stack Engineer</h2>
+            <p>
+                I craft elegant solutions to complex problems using modern technologies.
+                Specializing in scalable applications and open-source contributions.
+            </p>
+            <div class="buttons">
+                <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">LinkedIn</a>
+                <a class="github" href="https://github.com/Josh-Zak" target="_blank">Github</a>
+            </div>
         </div>
-    </div>
+        <div id="sec2" class="section">
+            <h2>My Work</h2>
+            <p>Here's an overview of some of my work.</p>
+            <div class="projects">
+                <Project name="Cryptotrage" desc="blah blah blah" link="dummy" github="dummy"/>
+                <Project name="Proj2" desc="blah blah blah" link="dummy" github="dummy"/>
+            </div>
+        </div>
+        <div id="sec3" class="section">
+            <h2>About Me</h2>
+            <div class="aboutDetails">
+                <div class="professional">
+                    <h3>Professional</h3>
+                    <p>
+                        Ever since I was young, I was always on the computer. From YouTube to
+                        video games its always been one of my favourite hobbies. In university,
+                        I decided to pursue a degree in computer science where I discovered
+                        software engineering and web developemnt. 
+                    </p>
+                </div>
+                <div class="personal">
+                    <h3>Personal</h3>
+                    <p>Discover my interests and hobbies outside of work.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© {{ year }} Josh Zak</p>
+            <div class="links">
+                <button class="linkedinFooter">LinkedIn</button>
+                <button class="githubfooter" >GitHub</button>
+            </div>
+        </div>
   </div>
 </template>
 
@@ -80,34 +81,42 @@
 .main{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 #header{
     display: flex;
     justify-content: space-between;
-    padding: 0 4rem;
+    padding: 0 8rem;
+    background-color: var(--primary);
 }
 
 #header .name{
-    color: var(--primary);
+    color: white;
 }
 
 #header .about{
-    color: var(--secondary);
+    color: white;
 }
 
 #header .projects{
-    color: var(--tertiary);
+    color: white;
 }
 
 .nav{
     display: flex;
     gap: 2rem;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .projects{
     display: flex;
+    gap: 2rem;
 }
 
 #sec1 h1, #sec2 h2, #sec3 h2{
@@ -118,8 +127,28 @@
     color: var(--secondary);
 }
 
+#sec1 .buttons{
+    display: flex;
+    gap: 2rem;
+}
+
+#sec1 a{
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.5rem;
+    gap: 2rem;
+}
+
 p{
     color: var(--tertiary);
+}
+
+#sec2{
+    background-color: rgb(243, 243, 243);
 }
 
 #sec3{
@@ -129,16 +158,18 @@ p{
 
 #sec3 .professional, #sec3 .personal{
     color: var(--secondary);
+    text-align: justify;
 }
 
 #sec1, #sec2, #sec3{
-    align-self: center;
-    width: 70%;
+    width: 100%;
+    padding: 8rem 8rem;
 }
 
 .aboutDetails{
     width: 100%;
     display: flex;
+    gap: 4rem;
 }
 
 .aboutDetails > * {
@@ -149,15 +180,13 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 8rem;
+    background-color: var(--primary);
 }
 
-h1{
-    font-size: xxx-large;
+.footer p{
+    color: white;
 }
 
-h2{
-    font-size: xx-large;
-}
 
 </style>
