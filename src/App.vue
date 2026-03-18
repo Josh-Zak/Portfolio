@@ -36,14 +36,32 @@
                     <h3>Professional</h3>
                     <p>
                         Ever since I was young, I was always on the computer. From YouTube to
-                        video games its always been one of my favourite hobbies. In university,
+                        video games it's always been one of my favourite hobbies. In university,
                         I decided to pursue a degree in computer science where I discovered
-                        software engineering and web developemnt. 
+                        software engineering and web developemnt. In my first position as a
+                        Junior Software Developer at Wavelo, I got the opportunity to learn so
+                        much working alongside senior developers. Today I'm currently working at
+                        Miipe as a Quality Assurance Analyst where I'm learning about Software
+                        Development from a testers perspective. It's really changed the way I
+                        think about developemnt. I'm more aware of edge cases and deliverables as
+                        they relate to business requirements.
                     </p>
                 </div>
                 <div class="personal">
                     <h3>Personal</h3>
-                    <p>Discover my interests and hobbies outside of work.</p>
+                    <p>
+                        I'm a "go all day" kind of person. I love my activities and sports. I play
+                        hockey, I ski, mountain bike, hike, camp, snowmobile, dirt bike and ATV
+                        just to name a few. I'm super competitive, and I'm always up for a good
+                        challenge, which is probably why I also love board games. Catan anyone?
+                        If I'm relaxing at home I like to play video games and watch movies. Some
+                        of my favourite games include Battlefield, League of Legends, and Call of
+                        Duty, while my favourite movies are Avatar, Star Wars (not the new ones),
+                        and Batman. Here are some fun facts about me: I'm very fascinated by space
+                        and I did an astronomy minor in university, I have a national bronze medal
+                        from a ski competition from when I was 8, and my favourite band is Billy Talent
+                        (big music guy too).
+                    </p>
                 </div>
             </div>
         </div>
