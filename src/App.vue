@@ -181,17 +181,21 @@ p{
 
 #sec1, #sec2, #sec3{
     width: 100%;
-    padding: 8rem 8rem;
+    padding: 6rem 8rem;
 }
 
 .aboutDetails{
     width: 100%;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .aboutDetails > * {
     width: 50%;
+    border: solid 2px var(--primary);
+    background-color: rgb(243, 243, 243);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
 }
 
 .footer{
