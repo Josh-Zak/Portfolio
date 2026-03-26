@@ -16,17 +16,34 @@
                 I craft elegant solutions to complex problems using modern technologies.
                 Specializing in scalable applications and open-source contributions.
             </p>
-            <div class="buttons">
-                <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">LinkedIn</a>
-                <a class="github" href="https://github.com/Josh-Zak" target="_blank">Github</a>
+            <div class="sec1Buttons">
+                <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
+                    <GrommetIconsLinkedinOption id="linkedinIcon"/>
+                    LinkedIn
+                </a>
+                <a class="github" href="https://github.com/Josh-Zak" target="_blank">
+                    <GrommetIconsGithub id="githubIcon"/>
+                    Github
+                </a>
             </div>
         </div>
         <div id="sec2" class="section">
             <h2>My Work</h2>
             <p>Here's an overview of some of my work.</p>
             <div class="projects">
-                <Project name="Cryptotrage" desc="blah blah blah" link="dummy" github="dummy"/>
-                <Project name="Proj2" desc="blah blah blah" link="dummy" github="dummy"/>
+                <Project 
+                    name="Cryptotrage"
+                    desc="Full-stack crypto arbitrage platform aggregating real-time exchange data to identify profitable trading opportunities."
+                    :stack="cryptoTrageTechStack"
+                    link="dummy"
+                    github="dummy"
+                />
+                <Project 
+                    name="Proj2"
+                    desc="blah blah blah"
+                    link="dummy"
+                    github="dummy"
+                />
             </div>
         </div>
         <div id="sec3" class="section">
@@ -78,14 +95,19 @@
 
 <script>
     import Project from "@/Project.vue";
+    import GrommetIconsGithub from '~icons/grommet-icons/github'
+    import GrommetIconsLinkedinOption from '~icons/grommet-icons/linkedin-option'
     export default{
         data() {
             return{
-                year: new Date().getFullYear()
+                year: new Date().getFullYear(),
+                cryptoTrageTechStack: ["Vue.js", "Node.js"]
             }
         },
         components: {
-            Project
+            Project,
+            GrommetIconsLinkedinOption,
+            GrommetIconsGithub
         }
     }
 
@@ -134,6 +156,7 @@
 
 .projects{
     display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -145,20 +168,37 @@
     color: var(--secondary);
 }
 
-#sec1 .buttons{
+#sec1 .sec1Buttons{
     display: flex;
     gap: 2rem;
 }
 
+.sec1Buttons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec1 .linkedin, #sec1 .github{
+    background-color: var(--primary);
+    width: 12%;
+}
+
+#linkedinIcon, #githubIcon{
+    stroke: white;
+    color: transparent;
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
 #sec1 a{
-    background-color: transparent;
-    border: 2px solid var(--secondary);
     border-radius: 5px;
     padding: 1rem 2rem;
     text-decoration: none;
     color: var(--primary);
     font-size: 1.5rem;
-    gap: 2rem;
+    gap: 1rem;
+    color: white;
 }
 
 p{
