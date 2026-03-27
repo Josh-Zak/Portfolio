@@ -3,28 +3,33 @@
 <template>
     <div class="main">
         <div id="header">
-            <p class="name">Josh Zak - FullStack Engineer</p>
-            <div class="nav">
+            <p class="name">Josh Zak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FullStack Engineer</p>
+            <div id="nav">
                 <a class="projects" href="#sec2">Projects</a>
                 <a class="about" href="#sec3">About</a>
             </div>
         </div>
         <div id="sec1" class="section">
-            <h1>Josh Zak</h1>
-            <h2>Full-Stack Engineer</h2>
-            <p>
-                I craft elegant solutions to complex problems using modern technologies.
-                Specializing in scalable applications and open-source contributions.
-            </p>
-            <div class="sec1Buttons">
-                <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
-                    <GrommetIconsLinkedinOption id="linkedinIcon"/>
-                    LinkedIn
-                </a>
-                <a class="github" href="https://github.com/Josh-Zak" target="_blank">
-                    <GrommetIconsGithub id="githubIcon"/>
-                    Github
-                </a>
+            <div id="sec1Left">
+                <h1>Josh Zak</h1>
+                <h2>Full-Stack Engineer</h2>
+                <p>
+                    I craft elegant solutions to complex problems using modern technologies.
+                    Specializing in scalable applications and open-source contributions.
+                </p>
+                <div id="sec1Buttons">
+                    <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
+                        <GrommetIconsLinkedinOption id="linkedinIcon"/>
+                        LinkedIn
+                    </a>
+                    <a class="github" href="https://github.com/Josh-Zak" target="_blank">
+                        <GrommetIconsGithub id="githubIcon"/>
+                        Github
+                    </a>
+                </div>
+            </div>
+            <div id="sec1Right">
+                <img src="@/assets/headshot.jpg" alt="Profile" >
             </div>
         </div>
         <div id="sec2" class="section">
@@ -143,13 +148,13 @@
     color: white;
 }
 
-.nav{
+#nav{
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     align-items: center;
 }
 
-.nav a{
+#nav a{
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -168,12 +173,12 @@
     color: var(--secondary);
 }
 
-#sec1 .sec1Buttons{
+#sec1 #sec1Buttons{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-.sec1Buttons a{
+#sec1Buttons a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +186,7 @@
 
 #sec1 .linkedin, #sec1 .github{
     background-color: var(--primary);
-    width: 12%;
+    width: 24%;
 }
 
 #linkedinIcon, #githubIcon{
@@ -199,6 +204,25 @@
     font-size: 1.5rem;
     gap: 1rem;
     color: white;
+}
+
+#sec1Left{
+    width: 60%;
+}
+
+#sec1Right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+#sec1Right img{
+    flex: 0 1 200px;
+    height: 100%;
+    border-radius: 50%;
+    border: solid 2px var(--secondary);
+    max-height: 400px;
 }
 
 p{
@@ -219,8 +243,12 @@ p{
     text-align: justify;
 }
 
-#sec1, #sec2, #sec3{
-    width: 100%;
+#sec1{
+    display: flex;
+    padding: 14rem 8rem;
+}
+
+#sec2, #sec3{
     padding: 6rem 8rem;
 }
 
