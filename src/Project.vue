@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="buttons">
-            <a class="link" :href="link" target="_blank">Link</a>
+            <a class="link" :href="link" target="_blank">Visit Website ></a>
             <a class="github" :href="github" target="_blank">GitHub</a>
         </div>
     </div>
@@ -34,47 +34,46 @@ export default{
 
 <style>
 .projectContainer{
-    border: solid black;
-    border-radius: 10px;
+    border: solid 2px var(--primary);
+    border-radius: 15px;
     padding: 2rem;
     display: flex;
     background-color: white;
 }
 
 .projectLeft{
-    flex: 5;
+    flex: 1;
 }
 
 .projectContainer .buttons{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
     align-items: center;
-    padding-top: 2rem;
 }
 
 .projectContainer .buttons *{
     padding: 0.5rem 1rem;
     width: 100%;
-    border: 2px solid black;
-    border-radius: 1.25rem;
+    border-radius: 15px;
     text-decoration: none;
-    text-align: left;
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
     color: white;
     background-color: var(--secondary);
 }
 
 #techStack{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .techStackNode{
     background-color: var(--secondary);
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    border-radius: 15px;
     font-size: 120%;
     width: 8%;
     text-align: center;
@@ -82,7 +81,6 @@ export default{
 
 .projectContainer p{
     color: var(--tertiary);
-    font-weight: bold;
 }
 
 .projectContainer h3{

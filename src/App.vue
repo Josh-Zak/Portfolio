@@ -3,7 +3,6 @@
 <template>
     <div class="main">
         <div id="header">
-            <p class="name">Josh Zak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FullStack Engineer</p>
             <div id="nav">
                 <a class="projects" href="#sec2">Projects</a>
                 <a class="about" href="#sec3">About</a>
@@ -14,8 +13,7 @@
                 <h1>Josh Zak</h1>
                 <h2>Full-Stack Engineer</h2>
                 <p>
-                    I craft elegant solutions to complex problems using modern technologies.
-                    Specializing in scalable applications and open-source contributions.
+                    I build scalable and robust applications focused on solving real-world problems.
                 </p>
                 <div id="sec1Buttons">
                     <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
@@ -43,12 +41,6 @@
                     link="dummy"
                     github="dummy"
                 />
-                <Project 
-                    name="Proj2"
-                    desc="blah blah blah"
-                    link="dummy"
-                    github="dummy"
-                />
             </div>
         </div>
         <div id="sec3" class="section">
@@ -57,32 +49,42 @@
                 <div class="professional">
                     <h3>Professional</h3>
                     <p>
-                        Ever since I was young, I was always on the computer. From YouTube to
-                        video games it's always been one of my favourite hobbies. In university,
-                        I decided to pursue a degree in computer science where I discovered
-                        software engineering and web developemnt. In my first position as a
-                        Junior Software Developer at Wavelo, I got the opportunity to learn so
-                        much working alongside senior developers. Today I'm currently working at
-                        Miipe as a Quality Assurance Analyst where I'm learning about Software
-                        Development from a testers perspective. It's really changed the way I
-                        think about developemnt. I'm more aware of edge cases and deliverables as
-                        they relate to business requirements.
+                        I've always been drawn to computers, spending much of my time growing up playing
+                        games, watching videos, and browsing the internet. This interest led me to pursue
+                        a degree in Computer Science, where I discovered a passion for software
+                        engineering and web development.
+                    </p>
+                    <p>
+                        As a Software Developer at Wavelo, I had the opportunity to work alongside senior
+                        engineers, gaining hands-on experience building and integrating real-world systems.
+                        Today, as a Quality Assurance Engineer at Miipe, I approach development from a
+                        tester's perspective—focusing on system behavior, edge cases, and alignment with
+                        business requirements.
+                    </p>
+                    <p>
+                        This unique perspective has strengthened my ability to think critically about
+                        software design and development, helping me build more reliable and well-rounded
+                        solutions.
                     </p>
                 </div>
                 <div class="personal">
                     <h3>Personal</h3>
                     <p>
-                        I'm a "go all day" kind of person. I love my activities and sports. I play
-                        hockey, I ski, mountain bike, hike, camp, snowmobile, dirt bike and ATV
-                        just to name a few. I'm super competitive, and I'm always up for a good
-                        challenge, which is probably why I also love board games. Catan anyone?
-                        If I'm relaxing at home I like to play video games and watch movies. Some
-                        of my favourite games include Battlefield, League of Legends, and Call of
-                        Duty, while my favourite movies are Avatar, Star Wars (not the new ones),
-                        and Batman. Here are some fun facts about me: I'm very fascinated by space
-                        and I did an astronomy minor in university, I have a national bronze medal
-                        from a ski competition from when I was 8, and my favourite band is Billy Talent
-                        (big music guy too).
+                        I'm a "go all day" kind of person who loves staying active. I enjoy a wide range
+                        of sports and outdoor activities, including hockey, skiing, mountain biking,
+                        hiking, camping, and motorsports. I'm super competitive and always up for a
+                        challenge, whether it's on the ice, on the trails, or around a board game (Catan,
+                        anyone?).
+                    </p>
+                    <p>
+                        When I'm relaxing, I like playing video games and watching movies. Some of my
+                        favorites include Battlefield, League of Legends, and Call of Duty, along with
+                        films like Avatar, Star Wars, and Batman.
+                    </p>
+                    <p>     
+                        A few fun facts about me: I have a strong interest in space and completed a
+                        minor in astronomy, earned a national bronze medal in the NASTAR ski racing
+                        series, and my favorite genre of music is alternative rock.
                     </p>
                 </div>
             </div>
@@ -90,8 +92,12 @@
         <div class="footer">
             <p>© {{ year }} Josh Zak</p>
             <div class="links">
-                <button class="linkedinFooter">LinkedIn</button>
-                <button class="githubfooter" >GitHub</button>
+                <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
+                    <GrommetIconsLinkedinOption id="linkedinIcon"/>
+                </a>
+                <a class="github" href="https://github.com/Josh-Zak" target="_blank">
+                    <GrommetIconsGithub id="githubIcon"/>
+                </a>
             </div>
         </div>
   </div>
@@ -122,6 +128,8 @@
 
 
 <style>
+/* 2 things are class=project */
+
 
 .main{
     display: flex;
@@ -129,48 +137,50 @@
     gap: 1.5rem;
 }
 
+
+
+/* Header */
 #header{
     display: flex;
-    justify-content: space-between;
-    padding: 0 8rem;
+    justify-content: center;
+    padding: 0 10rem;
     background-color: var(--primary);
 }
 
-#header .name{
+#header .about, #header .projects{
     color: white;
-}
-
-#header .about{
-    color: white;
-}
-
-#header .projects{
-    color: white;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 #nav{
     display: flex;
-    gap: 5rem;
+    gap: 6rem;
     align-items: center;
 }
 
-#nav a{
-    text-decoration: none;
-    font-size: 1.2rem;
-}
 
-.projects{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
+/* Multiple secs */
 #sec1 h1, #sec2 h2, #sec3 h2{
     color: var(--primary);
 }
 
+#sec2, #sec3{
+    padding: 6rem 10rem;
+}
+
+
+
+/* Sec 1 */
 #sec1 h2{
     color: var(--secondary);
+}
+
+#sec1{
+    display: flex;
+    padding: 14rem 10rem;
 }
 
 #sec1 #sec1Buttons{
@@ -225,14 +235,22 @@
     max-height: 400px;
 }
 
-p{
-    color: var(--tertiary);
+
+
+/* Sec 2 */
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #sec2{
     background-color: rgb(243, 243, 243);
 }
 
+
+
+/* Sec 3 */
 #sec3{
     display: flex;
     flex-direction: column;
@@ -243,19 +261,10 @@ p{
     text-align: justify;
 }
 
-#sec1{
-    display: flex;
-    padding: 14rem 8rem;
-}
-
-#sec2, #sec3{
-    padding: 6rem 8rem;
-}
-
 .aboutDetails{
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .aboutDetails > * {
@@ -266,11 +275,14 @@ p{
     padding: 1rem 2rem;
 }
 
+
+
+/* Footer */
 .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8rem;
+    padding: 0 10rem;
     background-color: var(--primary);
 }
 
@@ -278,5 +290,9 @@ p{
     color: white;
 }
 
+.footer .links{
+    display: flex;
+    gap: 2rem;
+}
 
 </style>
