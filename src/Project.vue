@@ -87,6 +87,10 @@ export default{
     color: var(--secondary);
 }
 
-
+@media screen and (max-width: 800px){
+    .projectContainer{
+        flex-direction: column;
+    }
+}
 
 </style>

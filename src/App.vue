@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div id="footer">
             <p>© {{ year }} Josh Zak</p>
             <div class="links">
                 <a class="linkedin" href="https://www.linkedin.com/in/joshzak19" target="_blank">
@@ -235,6 +235,13 @@
     max-height: 400px;
 }
 
+@media screen and (max-width: 800px) {
+    #sec1{
+        flex-direction: column;
+        padding: 4rem 2rem 6rem 2rem;
+    }
+}
+
 
 
 /* Sec 2 */
@@ -248,6 +255,11 @@
     background-color: rgb(243, 243, 243);
 }
 
+@media screen and (max-width: 800px) {
+    #sec2{
+        padding: 6rem 2rem;
+    }
+}
 
 
 /* Sec 3 */
@@ -275,10 +287,28 @@
     padding: 1rem 2rem;
 }
 
+@media screen and (max-width: 800px){
+    #sec3{
+        padding: 6rem 2rem;
+    }
+
+    .professional, .personal{
+        width: 100%;
+    }
+
+    #sec3 p{
+        font-size: 120%;
+    }
+
+    .aboutDetails{
+        flex-direction: column;
+    }
+}
+
 
 
 /* Footer */
-.footer{
+#footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -286,13 +316,19 @@
     background-color: var(--primary);
 }
 
-.footer p{
+#footer p{
     color: white;
 }
 
-.footer .links{
+#footer .links{
     display: flex;
     gap: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    #footer{
+        padding: 0 2rem;
+    }
 }
 
 </style>
