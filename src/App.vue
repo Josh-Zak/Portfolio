@@ -129,6 +129,8 @@
 
 <style>
 /* 2 things are class=project */
+/* headshot still too big */
+/* sec1 buttons shrink with screen size */
 
 
 .main{
@@ -218,6 +220,8 @@
 
 #sec1Left{
     width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 #sec1Right{
@@ -239,6 +243,25 @@
     #sec1{
         flex-direction: column;
         padding: 4rem 2rem 6rem 2rem;
+    }
+
+    #sec1Left, #sec1Right{
+        width: 100%;
+    }
+
+    #sec1Left{
+        padding-bottom: 2rem;
+        order: 1;
+        text-align: center;
+        align-items: center;
+    }
+
+    #sec1Right{
+        order: 0;
+    }
+
+    #sec1Buttons{
+        justify-content: center;
     }
 }
 
@@ -276,15 +299,18 @@
 .aboutDetails{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
+    justify-content: center;
 }
 
 .aboutDetails > * {
-    width: 50%;
+    flex: 0 0 45%;
     border: solid 2px var(--primary);
     background-color: rgb(243, 243, 243);
     border-radius: 1rem;
     padding: 1rem 2rem;
+    min-width: 600px;
 }
 
 @media screen and (max-width: 800px){
