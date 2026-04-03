@@ -43,6 +43,7 @@ export default{
 
 .projectLeft{
     flex: 1;
+    margin-right: 2rem;
 }
 
 .projectContainer .buttons{
@@ -70,12 +71,12 @@ export default{
 }
 
 .techStackNode{
-    background-color: var(--secondary);
-    color: white;
+    background-color: rgb(243, 243, 243);
+    color: var(--tertiary);
     padding: 0.5rem 1rem;
     border-radius: 15px;
     font-size: 120%;
-    width: 8%;
+    width: 8rem;
     text-align: center;
 }
 
@@ -87,9 +88,13 @@ export default{
     color: var(--secondary);
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     .projectContainer{
         flex-direction: column;
+    }
+
+    .techStackNode{
+        margin-bottom: 2rem;
     }
 }
 

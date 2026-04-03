@@ -1,11 +1,9 @@
-<script setup></script>
-
 <template>
     <div class="main">
         <div id="header">
             <div id="nav">
-                <a class="projects" href="#sec2">Projects</a>
-                <a class="about" href="#sec3">About</a>
+                <a class="navItem" href="#sec2">Projects</a>
+                <a class="navItem" href="#sec3">About</a>
             </div>
         </div>
         <div id="sec1" class="section">
@@ -128,10 +126,6 @@
 
 
 <style>
-/* 2 things are class=project */
-/* headshot still too big */
-/* sec1 buttons shrink with screen size */
-
 
 .main{
     display: flex;
@@ -149,10 +143,13 @@
     background-color: var(--primary);
 }
 
-#header .about, #header .projects{
-    color: white;
+.navItem{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin: 1.5rem 0;
     font-size: 1.5rem;
+    color: white;
     text-decoration: none;
 }
 
@@ -176,52 +173,51 @@
 
 
 /* Sec 1 */
+#sec1{
+    display: flex;
+    align-items: center;
+    padding: 10rem 10rem;
+}
+
 #sec1 h2{
     color: var(--secondary);
 }
 
-#sec1{
+#sec1Buttons{
     display: flex;
-    padding: 14rem 10rem;
-}
-
-#sec1 #sec1Buttons{
-    display: flex;
-    gap: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 #sec1Buttons a{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    gap: 1rem;
+    color: white;
+    width: clamp(170px, 1.5vw, 200px);
 }
 
 #sec1 .linkedin, #sec1 .github{
     background-color: var(--primary);
-    width: 24%;
 }
 
 #linkedinIcon, #githubIcon{
     stroke: white;
     color: transparent;
-    height: 1.75rem;
-    width: 1.75rem;
-}
-
-#sec1 a{
-    border-radius: 5px;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    color: var(--primary);
-    font-size: 1.5rem;
-    gap: 1rem;
-    color: white;
+    height: 1.75em;
+    width: 1.75em;
 }
 
 #sec1Left{
     width: 60%;
     display: flex;
     flex-direction: column;
+    padding-right: 2rem;
 }
 
 #sec1Right{
@@ -232,57 +228,19 @@
 }
 
 #sec1Right img{
-    flex: 0 1 200px;
-    height: 100%;
+    max-width: 100%;
     border-radius: 50%;
     border: solid 2px var(--secondary);
-    max-height: 400px;
-}
-
-@media screen and (max-width: 800px) {
-    #sec1{
-        flex-direction: column;
-        padding: 4rem 2rem 6rem 2rem;
-    }
-
-    #sec1Left, #sec1Right{
-        width: 100%;
-    }
-
-    #sec1Left{
-        padding-bottom: 2rem;
-        order: 1;
-        text-align: center;
-        align-items: center;
-    }
-
-    #sec1Right{
-        order: 0;
-    }
-
-    #sec1Buttons{
-        justify-content: center;
-    }
+    max-height: 500px;
 }
 
 
 
 /* Sec 2 */
-.projects{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
 #sec2{
     background-color: rgb(243, 243, 243);
 }
 
-@media screen and (max-width: 800px) {
-    #sec2{
-        padding: 6rem 2rem;
-    }
-}
 
 
 /* Sec 3 */
@@ -301,34 +259,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .aboutDetails > * {
-    flex: 0 0 45%;
+    flex: 1 1 0;
     border: solid 2px var(--primary);
     background-color: rgb(243, 243, 243);
     border-radius: 1rem;
     padding: 1rem 2rem;
     min-width: 600px;
-}
-
-@media screen and (max-width: 800px){
-    #sec3{
-        padding: 6rem 2rem;
-    }
-
-    .professional, .personal{
-        width: 100%;
-    }
-
-    #sec3 p{
-        font-size: 120%;
-    }
-
-    .aboutDetails{
-        flex-direction: column;
-    }
 }
 
 
@@ -351,10 +291,61 @@
     gap: 2rem;
 }
 
-@media screen and (max-width: 800px) {
-    #footer{
+
+
+/* Media queries */
+@media screen and (max-width: 1300px) {
+    #sec1{
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+
+    #sec1Left{
+        padding-right: 0;
+        order: 1;
+        text-align: center;
+        align-items: center;
+    }
+
+    #sec1Left{
+        width: 100%;
+    }
+
+    #sec1Right{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #sec1{
+        padding: 4rem 2rem 6rem 2rem;
+    }
+
+    #sec2, #sec3{
+        padding: 6rem 2rem;
+    }
+
+    #header, #footer{
         padding: 0 2rem;
     }
+
+    #sec1Buttons{
+        justify-content: center;
+    }
+
+    .professional, .personal{
+        width: 100%;
+        min-width: 0;
+    }
+
+    #sec3 p{
+        font-size: 120%;
+    }
+
+    .aboutDetails{
+        flex-direction: column;
+    }
+
 }
 
 </style>
