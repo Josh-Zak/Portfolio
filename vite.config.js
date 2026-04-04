@@ -24,4 +24,5 @@ export default defineConfig({
       usePolling: true
     }
   },
+  base: '/Portfolio/',
 })
