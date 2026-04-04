@@ -36,8 +36,8 @@
                     name="Cryptotrage"
                     desc="Full-stack crypto arbitrage platform aggregating real-time exchange data to identify profitable trading opportunities."
                     :stack="cryptoTrageTechStack"
-                    link="dummy"
-                    github="dummy"
+                    link="https://cryptotrage.vercel.app/"
+                    github="https://github.com/Josh-Zak/arbitrage_bot"
                 />
             </div>
         </div>
